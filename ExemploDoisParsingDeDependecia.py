@@ -13,9 +13,8 @@ locais = documento[6], documento[13]
 print(tarefas, locais)
 
 for local in locais:
-    print(local)
-    print(type(local))
     for objeto in local.ancestors:
+        print("Ancestrais de {}".format(local),list(local.ancestors))
         if objeto in tarefas:
             print("Reserva de {} é para o {}".format(objeto, local))
             break
